@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(60, 0, 119);
+}
+.header div {
+  font-size: 2em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+}
