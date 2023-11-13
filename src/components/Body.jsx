@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../style/body.css";
+import Card from "./Card";
 
 function Body() {
   const [pokeData, setPokeData] = useState([]);
@@ -19,7 +20,7 @@ function Body() {
   }, []);
   return (
     <div className="container">
-      <img src={pokeData?.sprites?.front_default} alt="" />
+      <Card />
     </div>
   );
 }
