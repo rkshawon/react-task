@@ -25,6 +25,10 @@
   margin-bottom: 10px;
 }
 
+.body {
+  padding: 20px;
+}
+
 .card_container {
   margin: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -75,8 +79,8 @@
 
 .filter label {
   margin-right: 10px;
-  font-size: 1.1em; /* Increase font size for better visibility */
-  color: #555; /* Adjust color for better contrast */
+  font-size: 1.1em;
+  color: #555;
 }
 
 .filter select {
@@ -94,35 +98,37 @@
   border-color: #555;
 }
 
-/* Style the dropdown arrow */
 .filter select::after {
   content: "▼";
   font-size: 0.8em;
   margin-left: 5px;
 }
 
-/* Mobile: 1 card in a row */
+.load-n-error {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
   }
 }
 
-/* Tablet: 2 cards in a row */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Laptop: 3 cards in a row */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Desktop: 4 cards in a row */
 @media screen and (min-width: 1201px) {
   .container {
     grid-template-columns: repeat(4, 1fr);
