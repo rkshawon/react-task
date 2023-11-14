@@ -1,6 +1,5 @@
 .app {
   background-color: white;
-  border-radius: 2px;
 }
 
 .header {
@@ -8,8 +7,6 @@
   display: flex;
   justify-content: center;
   background: linear-gradient(to right, #45046a, #190061);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
 }
 .header div {
   font-size: 2em;
