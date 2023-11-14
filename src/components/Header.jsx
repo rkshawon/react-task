@@ -1,9 +1,9 @@
-import "../style/header.css";
+import "../App.css";
 
 function Header() {
   return (
     <div className="header">
-      <div>Pokemon</div>
+      <div>Pokemon World</div>
     </div>
   );
 }

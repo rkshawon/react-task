@@ -1,7 +1,130 @@
 .app {
-  width: 50%;
-  min-width: 500px;
-  margin-top: 10%;
   background-color: white;
   border-radius: 2px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #45046a, #190061);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.header div {
+  font-size: 2em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+}
+.container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card_container {
+  margin: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(232, 255, 255, 0.788),
+    rgb(255, 242, 242)
+  );
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card_container:hover {
+  transform: scale(1.05);
+}
+
+.card_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card_container .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card_container .type {
+  color: #555;
+}
+
+.card_container .type {
+  font-style: italic;
+}
+
+.card_container .height {
+  margin-top: 3px;
+}
+
+.filter {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filter label {
+  margin-right: 10px;
+  font-size: 1.1em; /* Increase font size for better visibility */
+  color: #555; /* Adjust color for better contrast */
+}
+
+.filter select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.filter select:hover,
+.filter select:focus {
+  border-color: #555;
+}
+
+/* Style the dropdown arrow */
+.filter select::after {
+  content: "▼";
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* Mobile: 1 card in a row */
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet: 2 cards in a row */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop: 3 cards in a row */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop: 4 cards in a row */
+@media screen and (min-width: 1201px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
